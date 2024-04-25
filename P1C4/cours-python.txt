@@ -1,0 +1,24 @@
+Les variables
+Une variable dans Python est constituée de trois éléments :
+Son nom
+Son type
+Sa valeur
+
+Déclarer une variable
+Il est très facile de déclarer une variable dans Python. Le code ci-dessous permet de déclarer une variable.
+livre = "Gatsby le Magnifique"
+age = 25
+
+Modifier une variable
+livre = "Le nom de la rose"
+
+Afficher les variables avec f-string
+Pour afficher des variables, la f-string est souvent utilisée car elle permet d'insérer facilement les variables dans la chaîne de caractères à afficher. 
+Une f-string est une chaîne de caractères précédée d'un  f   (ou  F   ), et contenant des expressions entre accolades {}  qui seront évaluées lors de l'exécution du programme, exemple :
+nom = "Dupont"
+prenom = "Jean"
+age = 30
+
+print(f"Bonjour, je m'appelle {prenom} {nom} et j'ai {age} ans.")
+
+Nommez une variable de manière claire et descriptive pour rendre le code plus lisible et faciliter sa compréhension.
