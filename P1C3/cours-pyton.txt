@@ -1,0 +1,20 @@
+Pour ajouter un commentaire en python c'est avec le symbole #
+
+On peut lancer l'interpréteur python dans un terminal comme ceci :
+sous windows :
+python ou py
+>>>
+
+sous Mac :
+python3
+>>>
+
+et pour quiter l'interpréteur : 
+exit()
+
+On peut exécuter les commandes d'un fichier python dans le terminal, 
+comme ceci sous windows :
+python nonfichier.py 
+
+comme ceci sous Mac :
+python3 nonfichier.py 
