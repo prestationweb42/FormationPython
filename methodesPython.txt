@@ -146,3 +146,21 @@ Accédez aux éléments de la liste via l’indice, qui commence à 0.
 Modifiez une liste en utilisant les indices et l’opérateur d’affectation =  .
 Vous pouvez ajouter, retirer, trier les listes et bien plus, en utilisant les méthodes de listes.
 Les tuples sont comme des listes, mais sont définis par des parenthèses   ()  à la place de crochets   []  , et ils sont immuables.
+
+En résumé
+Un dictionnaire est un moyen d’enregistrer des paires clés-valeurs qui représentent un objet plus grand.
+
+Vous pouvez créer un dictionnaire avec des accolades {}  , et y mettre toutes les clés-valeurs dès le début, ou les ajouter au fur et à mesure.
+
+Chaque clé dans un dictionnaire doit être unique.
+
+Résumé de la partie 1
+Félicitations ! Vous avez atteint la fin de la partie 1 du cours, et vous pouvez maintenant créer des données, les blocs de code de base du code Python. Vous avez déjà fait beaucoup !
+
+Vous avez utilisé des variables pour enregistrer des informations comme données dans le code Python.
+
+Vous avez utilisé des types de données pour classer différents types de données : les entiers, les virgules flottantes, les chaînes de caractères et les booléens.
+
+Vous avez utilisé des listes et des tuples pour enregistrer des données qui sont liées.  
+
+Vous avez utilisé des dictionnaires pour enregistrer des données complexes.
