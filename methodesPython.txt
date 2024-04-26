@@ -45,3 +45,16 @@ age = 30
 print(f"Bonjour, je m'appelle {prenom} {nom} et j'ai {age} ans.")
 
 Nommez une variable de manière claire et descriptive pour rendre le code plus lisible et faciliter sa compréhension.
+
+P1C5
+Classez des données avec les types de données
+- les entiers (Integers, en anglais) ;
+- les virgules flottantes (Floats, en anglais) ;
+- les chaînes de caractères (Strings, en anglais) ;
+- les booléens.
+
+La fonction "type()" 
+En Python, cette fonction est utilisée pour déterminer le type de données d'une variable. Elle renvoie le type de l'objet en tant que sortie, tel que 'int', 'str', 'bool', etc. Cela permet aux développeurs de vérifier rapidement et facilement le type de données avec lesquelles ils travaillent.
+Exemple :
+Votre nom est Dan et de type : <class 'str'>
+Vous avez 35 ans et de type : <class 'int'>
