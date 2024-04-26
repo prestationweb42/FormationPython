@@ -1,0 +1,87 @@
+P1C6
+1 Enregistrez des groupes de données avec les listes
+
+Dans Python, on utilise des crochets  [ ]  pour indiquer une liste. 
+Le code suivant crée une liste de différentes plateformes de réseaux sociaux, et la sauvegarde dans une variable appelée  'plateformes_sociales'  .
+
+plateformes_sociales = ["Facebook", "Instagram", "Snapchat", "Twitter"]
+
+Les listes acceptent n’importe quel type de données aussi, et même des combinaisons de types de données.
+
+Pour accéder aux éléments d’une liste, on utilise un indice. 
+Une liste commence à indice 0
+Chaque élément a un indice qui lui correspond, selon sa position dans la liste. Vous obtenez la valeur de cet indice avec la syntaxe suivante :  
+liste[indice]
+
+Dans Python, vous pouvez aussi accéder aux éléments en sens inverse, en utilisant des nombres négatifs. 
+Pour accéder au dernier élément de la liste, utilisez l’indice -1.
+
+2 Accédez aux caractères d’une chaîne comme un élément d’une liste
+Les indices fonctionnent aussi avec les chaînes de caractères ! 
+En fait, les chaînes de caractères sont juste des listes de caractères. 
+Chaque caractère correspond à un indice qui va de zéro à la longueur de la chaîne.
+
+3 Modifiez les éléments d’une liste
+Pour modifier une case d'une liste, il suffit d'utiliser l'indice de la case que l'on souhaite modifier, et d'y affecter la nouvelle valeur à l'aide de l'opérateur d'affectation (=), tout comme pour une variable.
+>>> plateformes_sociales[2] = "LinkedIn"
+>>> print(plateformes_sociales)
+["Facebook", "Instagram", "LinkedIn", "Twitter"]
+
+4 Ajoutez, retirez, triez les listes et longueur d'une liste
+Dans Python, c’est très simple de réaliser toutes sortes d’opérations avec les listes. 
+Au lieu de créer une toute nouvelle liste à chaque fois que vous voulez ajouter, retirer ou trier des éléments, vous pouvez faire appel à une méthode de liste. 
+Une méthode est une façon de réaliser une opération spécifique sur un élément.  
+Ajouter un élément à une liste existante, on utilise la méthode : append()  :
+>>> plateformes_sociales.append("TikTok")
+>>> print(plateformes_sociales)
+["Facebook", "Instagram", "Snapchat", "Twitter", "TikTok"]
+
+Pour retirer un élément spécifique d’une liste, on utilise la méthode : remove(),
+mais retire uniquement la première instance du terme que vous saisissez.
+
+Pour connaître la longueur de la liste, utilisez la méthode : len()
+>>> len(plateformes_sociales)
+4
+
+Pour trier une liste c'est la méthode sort() 
+Elle trie les éléments de la liste. 
+Le tri se fait alphabétiquement pour les listes de chaînes, et numériquement pour les listes de nombres.
+Exemple :
+plateformes_sociales.sort()
+
+Autres méthodes
+extend() -> Ajoute plusieurs éléments à la fin de la liste.
+
+insert() -> Insère un élément à une position donnée dans la liste.
+
+pop() -> Supprime et renvoie l'élément à une position donnée de la liste, ou le dernier élément si aucun indice n'est spécifié.
+
+index()-> Renvoie la première occurrence de l'élément spécifié dans la liste.
+
+count() -> Renvoie le nombre d'occurrences de l'élément spécifié dans la liste.
+
+reverse() -> Inverse l'ordre des éléments de la liste.
+
+5 Les tuples
+Les tuples sont une autre structure de Python qui sert à enregistrer des données. Au lieu des crochets   [ ]  , ils se caractérisent par les parenthèses   ()
+plateformes_sociales_tuple = ("Facebook", "Instagram", "TikTok", "Twitter")
+
+Beaucoup des propriétés des tuples sont similaires à celles des listes normales. 
+Par exemple, les listes et les tuples utilisent tous deux les indices. 
+La principale différence est que les tuples sont immuables (Immutable en anglais), alors que les listes sont modifiables. 
+
+6 Trouvez un élément
+Pour savoir si un élément est présent dans une liste ou un tuple, on peut utiliser l'opérateur in  . 
+Cet opérateur retourne True  si l'élément est présent dans la séquence, et False  sinon.
+>>> nombres = [1,2,3,4,5]
+>>> 5 in nombres
+True
+>>> 8 in nombres
+False
+
+En résumé
+Une liste est un moyen d’enregistrer plusieurs données ensemble.
+Accédez aux éléments de la liste via l’indice, qui commence à 0.
+Modifiez une liste en utilisant les indices et l’opérateur d’affectation =  .
+Vous pouvez ajouter, retirer, trier les listes et bien plus, en utilisant les méthodes de listes.
+Les tuples sont comme des listes, mais sont définis par des parenthèses   ()  à la place de crochets   []  , et ils sont immuables.
