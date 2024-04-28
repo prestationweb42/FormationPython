@@ -147,6 +147,73 @@ Modifiez une liste en utilisant les indices et l’opérateur d’affectation = 
 Vous pouvez ajouter, retirer, trier les listes et bien plus, en utilisant les méthodes de listes.
 Les tuples sont comme des listes, mais sont définis par des parenthèses   ()  à la place de crochets   []  , et ils sont immuables.
 
+P1C7
+Enregistrez des données complexes avec des dictionnaires
+1 Parfois vous avez besoin de représenter des données plus complexes que des nombres, des chaînes ou des listes.
+
+Un dictionnaire est une structure de données qui enregistre des données dans des paires clés-valeurs. Voici un exemple d’une clé et d’une valeur :  
+
+"responsable_de_campagne": "Jeanne d'Arc"
+
+La clé est   "responsable_de_campagne"  et la valeur est   "Jeanne d'Arc"  . 
+
+Les dictionnaires sont indiqués par des accolades {}  au début et à la fin. Chaque paire clé-valeur comprend un deux-points  :  placé entre la clé et la valeur, et une virgule  ,   à la fin. 
+
+Chaque dictionnaire doit être composé de clés uniques.
+
+Dans le diagramme ci-dessous, le dictionnaire défini a trois éléments, et chaque élément est une paire clé-valeur.
+
+2 Créez un dictionnaire , exemple :
+nouvelle_campagne = {
+"responsable_de_campagne": "Jeanne d'Arc",
+"nom_de_campagne": "Campagne nous aimons les chiens",
+"date_de_début": "01/01/2020",
+"influenceurs_importants": ["@MonAmourDeChien", "@MeilleuresFriandisesPourChiens"]
+}
+
+Vous pouvez aussi créer un nouveau dictionnaire avec des accolades vides  {}  ou la fonction  dict()  , et avec des paires clés-valeurs comme indiqué ci-dessous :
+taux_de_conversion = {}
+taux_de_conversion['facebook'] = 3.4
+taux_de_conversion['instagram'] = 1.2
+taux_de_conversion = dict()
+taux_de_conversion['facebook'] = 3.4
+taux_de_conversion['instagram'] = 1.2
+
+3 Accédez à une valeur dans un dictionnaire avec sa clé
+Pour accéder aux différentes valeurs, vous pouvez utiliser la clé pour chacune des paires clés-valeurs.
+
+>>> nouvelle_campagne['responsable_de_campagne']
+"Jeanne d'Arc"
+>>> taux_de_conversion['facebook']
+3.4
+
+3 Réalisez des opérations courantes avec les dictionnaires
+Comme pour les listes, plusieurs méthodes (ou opérations) intégrées à Python vous permettent de manipuler les données dans les dictionnaires.
+
+Ajoutez une paire clé-valeur
+Pour ajouter une paire clé-valeur à un dictionnaire, ajoutez juste une nouvelle clé dans le dictionnaire existant. 
+Si la clé existe déjà, vous l’écraserez en définissant une nouvelle valeur. 
+nouvelle_campagne["date_de_début"] = "02/02/2022"
+Si la clé n'existe pas, vous la définissez avec une nouvelle paire clé / valeur. 
+nouvelle_campagne["date_de_fin"] = "03/03/2023"
+
+Supprimez une paire clé-valeur
+Pour supprimer une paire clé-valeur, vous pouvez utiliser :
+le mot-clé  del  et la clé que vous voulez supprimer, 
+ou encore la méthode   pop  . 
+Pour supprimer la paire clé-valeur  "origine"  de la paire  clé-valeur  , écrivez :
+
+>>> del nouvelle_campagne["date_de_fin"] 
+>>> print(nouvelle_campagne)
+
+4 Vérifiez l’existence d’une clé spécifique
+Vous pouvez utiliser le mot-clé in  pour vérifier si une clé spécifique existe dans un dictionnaire. 
+Pour faire cela, spécifiez la clé que vous voulez rechercher, écrivez le mot-clé in  et le nom de la variable du dictionnaire que vous examinez. 
+Le résultat renvoie un booléen qui indique si la clé est dans ce dictionnaire. 
+
+>>> "date_de_début" in nouvelle_campagne
+True
+
 En résumé
 Un dictionnaire est un moyen d’enregistrer des paires clés-valeurs qui représentent un objet plus grand.
 
@@ -164,3 +231,96 @@ Vous avez utilisé des types de données pour classer différents types de donn�
 Vous avez utilisé des listes et des tuples pour enregistrer des données qui sont liées.  
 
 Vous avez utilisé des dictionnaires pour enregistrer des données complexes.
+
+P2C1
+1 Conditions avec les instructions if/else
+L’un des blocs essentiels à la structure d’un déroulement conditionnel est l’instruction if.
+
+Si la condition est vraie (True), le code sexécutera. 
+ Si cette condition est fausse (False), le code ne s’exécutera pas. 
+
+Par exemple :
+ensoleille = True
+if ensoleille:
+    print("on va à la plage !")
+else:
+    print("on reste à la maison !")
+La ligne if s’exécute si la condition  ensoleille  est True.
+La ligne else s’exécute si la condition  ensoleille  est False.
+
+2 Conditions alternatives en ajoutant une clause 'elif'
+Les instructions if/elif/else vous permettent de définir des conditions multiples. 
+Le mot-clé elif  vous permet d’ajouter autant de conditions que vous voulez. 
+Vous devez ensuite terminer avec une instruction else.
+
+Admettons que vous vouliez aller à la plage s’il fait chaud dehors, et que vous vouliez faire un bonhomme de neige s’il neige. Et sinon, vous restez à la maison. Vous pouvez coder tout ça avec la syntaxe ci-dessous :
+
+ensoleille = False
+neige = True
+if ensoleille:
+    print("on va à la plage !")
+elif neige:
+    print("on fait un bonhomme de neige")
+else:
+    print("on reste à la maison !")
+
+3 Conditions multiples avec des opérateurs logiques
+Si vous voulez vérifier plusieurs conditions pour un seul résultat dans la même instruction  if  , vous pouvez utiliser les opérateurs logiques :
+    and  : vérifie si deux conditions sont toutes les deux vraies.
+    or  : vérifie si au moins une condition est vraie.
+    not  : vérifie si une condition n’est pas vraie (c’est-à-dire fausse). 
+
+Ces opérateurs peuvent être combinés et mélangés selon vos besoins.
+
+Admettons que vous vouliez aller à la plage seulement s’il y a du soleil ET que c’est le weekend. Mais s’il y a du soleil et que nous sommes au milieu de la semaine, vous devez être au travail.
+
+Attention : Il est important de garder en tête l'ordre d'évaluation des conditions dans une expression conditionnelle, surtout lorsque des opérateurs "or" et "and" sont utilisés. 
+L'opérateur "or" s'arrêtera dès qu'il trouvera une condition vraie, 
+tandis que l'opérateur "and" s'arrêtera dès qu'il rencontrera une condition fausse. 
+Il est donc conseillé de bien réfléchir à l'ordre des conditions afin d'optimiser la performance du programme, et d’éviter des évaluations inutiles.
+
+4 Conditions complexes avec des expressions comparatives
+Les expressions comparatives vous permettent de comparer différentes expressions entre elles, et d’évaluer si une expression est vraie ou fausse.
+
+Si vous avez deux valeurs,a et b, vous pouvez utiliser les opérateurs de comparaison suivants dans Python : 
+    Égal à :              a   ==  b
+    Non égal à :          a   !=  b
+    Moins que :           a   <  b
+    Moins que ou égal à : a   <=  b
+    Plus que :            a   >  b
+    Plus que ou égal à :  a   >=  b 
+
+Par exemple :
+nombre_de_sieges = 30
+nombre_dinvites = 25
+if nombre_dinvites < nombre_de_sieges:
+    # autoriser plus d’invités
+else:
+    # ne pas autoriser plus d’invités
+
+5 Simplifiez votre code avec les match cases
+Le match est une fonctionnalité pour faciliter la comparaison de valeurs à l'aide de motifs. Le but est de simplifier la syntaxe de certaines structures courantes qui utilisent des blocs if, elif et else. Le match offre une alternative plus concise et plus lisible.
+
+Les mots-clés utilisés dans cette structure conditionnelle. 
+    Le mot-clé 'match'  est utilisé pour indiquer le début d'un bloc de match case, suivi de la variable à évaluer. 
+    Le mot-clé 'case'  est utilisé pour vérifier si une valeur donnée correspond à une condition spécifique dans ce bloc. 
+    Le symbole  _   est utilisé pour définir une action à effectuer si aucune condition ne correspond.
+
+Exemple la variable fruit :
+fruit = "pomme"
+match fruit:
+    case "pomme":
+        print("J'aime les pommes !")
+    case "banane":
+        print("Je n'aime pas les bananes.")
+    case "orange":
+        print("Les oranges sont bonnes pour la santé.")
+    case _:
+        print("Je ne connais pas ce fruit.")
+
+Dans cet exemple, on teste la valeur de la variable fruit et on exécute une action différente pour chaque cas possible. 
+    Si fruit est égal à "pomme", on affiche "J'aime les pommes !". 
+    Si fruit est égal à "banane", on affiche "Je n'aime pas les bananes." et ainsi de suite. 
+    Si la variable fruit n'est égale à aucun des cas testés, on exécute la dernière action. 
+    C’est le cas par défaut, où le  _   représente la valeur par défaut. 
+    Il est utilisé lorsque toutes les autres options de cas ne correspondent pas à la valeur testée.
